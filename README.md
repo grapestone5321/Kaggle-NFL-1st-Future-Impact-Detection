@@ -34,6 +34,28 @@ To submit, simply add these three lines at the end of your code:
 
 ### Current BestLB Score: 0.1329
 
+
+## Detects 2 class objects by tito
+
+### class1: helmet without impact
+### class2: helmet with impact
+
+### Training part:
+2Class Object Detection Training
+
+https://www.kaggle.com/its7171/2class-object-detection-training/
+
+### Inference part:
+2Class Object Detection Inference
+
+https://www.kaggle.com/its7171/2class-object-detection-inference
+
+### Object Detection part
+: based on EfficientDet notebook for global wheat detection competition by shonenkov, which is using github repos efficientdet-pytorch by @rwightman.
+
+### [Training] EfficientDet
+https://www.kaggle.com/shonenkov/training-efficientdet
+
 ------
 
 ## Data Overview
