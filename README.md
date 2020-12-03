@@ -34,6 +34,7 @@ To submit, simply add these three lines at the end of your code:
 
 ### Current BestLB Score: 0.1329
 
+-------
 
 ## Detects 2 class objects by tito
 
