@@ -28,6 +28,7 @@ To submit, simply add these three lines at the end of your code:
      env = nflimpact.make_env()
      env.predict(df) # df is a pandas dataframe of your entire submission file
 
+-------
 
 ## Progress
 
