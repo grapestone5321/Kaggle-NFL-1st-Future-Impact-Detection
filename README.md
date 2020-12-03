@@ -36,7 +36,7 @@ To submit, simply add these three lines at the end of your code:
 ------
 
 ## Data Overview
-There are three different types of data provided for this problem:
+### There are three different types of data provided for this problem:
 
 ### Image Data: 
 Almost 10,000 images and associated helmet labels for the purpose of building a helmet detection computer vision system.
