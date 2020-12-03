@@ -29,3 +29,9 @@ To submit, simply add these three lines at the end of your code:
      env.predict(df) # df is a pandas dataframe of your entire submission file
 
 
+## Progress
+
+### Current BestLB Score: 0.1329
+
+
+
