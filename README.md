@@ -33,6 +33,7 @@ To submit, simply add these three lines at the end of your code:
 
 ### Current BestLB Score: 0.1329
 
+------
 
 ## Data Overview
 There are three different types of data provided for this problem:
@@ -51,4 +52,8 @@ The labeled video dataset provides video for 60 plays observed from both the sid
 Tracking data for all players that participate in the provided 60 plays.
 
 The player track file in .csv format includes player position, direction, and orientation data for each player during the entire course of the play collected using the Next Gen Stats (NGS) system. This data is indexed by gameKey, playID, and player, with the time variable providing a temporal index within an individual play.
+
+-------
+
+
 
