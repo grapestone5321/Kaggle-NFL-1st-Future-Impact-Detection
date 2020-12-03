@@ -34,4 +34,21 @@ To submit, simply add these three lines at the end of your code:
 ### Current BestLB Score: 0.1329
 
 
+## Data Overview
+There are three different types of data provided for this problem:
+
+### Image Data: 
+Almost 10,000 images and associated helmet labels for the purpose of building a helmet detection computer vision system.
+
+The labeled image dataset consists of 9947 labeled images and a .csv file named image_labels.csv that contains the labeled bounding boxes for all images. This dataset is provided to support the development of helmet detection algorithms.
+
+### Video Data: 
+120 videos (60 plays) from both a sideline and endzone point of view (one each per play) with associated helmet and helmet impact labels for the purpose of building a helmet impact detection computer vision system.
+
+The labeled video dataset provides video for 60 plays observed from both the sideline and endzone perspective (120 videos total). The video_labels.csv file contains labeled bounding boxes for every helmet that is visible in every frame of every video.
+
+### Tracking Data: 
+Tracking data for all players that participate in the provided 60 plays.
+
+The player track file in .csv format includes player position, direction, and orientation data for each player during the entire course of the play collected using the Next Gen Stats (NGS) system. This data is indexed by gameKey, playID, and player, with the time variable providing a temporal index within an individual play.
 
