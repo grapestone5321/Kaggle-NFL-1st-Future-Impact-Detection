@@ -58,18 +58,11 @@ The player track file in .csv format includes player position, direction, and or
 -------
 
 ## Detects 2 class objects by tito
+### Object Detection part is based on EfficientDet notebook for global wheat detection competition by shonenkov, which is using github repos efficientdet-pytorch by @rwightman.
+
 - class1: helmet without impact
 
 - class2: helmet with impact
-
-### Training part: 2Class Object Detection Training
-https://www.kaggle.com/its7171/2class-object-detection-training
-
-
-### Inference part: 2Class Object Detection Inference
-https://www.kaggle.com/its7171/2class-object-detection-inference
-
--------
 
 ### Object Detection part
 : based on EfficientDet notebook for global wheat detection competition by shonenkov, which is using github repos efficientdet-pytorch by @rwightman.
@@ -78,6 +71,35 @@ https://www.kaggle.com/its7171/2class-object-detection-inference
 https://www.kaggle.com/shonenkov/training-efficientdet
 
 ------
+
+### Training part: 2Class Object Detection Training
+https://www.kaggle.com/its7171/2class-object-detection-training
+
+### Inference part: 2Class Object Detection Inference
+https://www.kaggle.com/its7171/2class-object-detection-inference
+
+
+### Dataset by tito
+### nfl-lib: 
+https://www.kaggle.com/its7171/nfl-lib
+
+- pkgs.tgz
+
+- timm-0.1.26-py3-none-any.whl
+
+
+### nfl-models:
+https://www.kaggle.com/its7171/nfl-models
+
+- best-checkpoint-002epoch.bin
+
+- best-checkpoint-018epoch.bin
+
+- efficientdet_d5-ef44aea8.pth
+
+-------
+
+
 
 
 
