@@ -151,7 +151,25 @@ https://www.kaggle.com/its7171/nfl-models
 - efficientdet_d5-ef44aea8.pth
 
 -------
+## 2Class Object Detection strict filter: by Art
+### both zones 2Class Object Detection strict filter
+https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
+- A notebook with filter to remove some of the False Positives by leaving only predictions which are present in both "Endzone" and "Sideline" views. 
+
+- Here is one more filtering idea which is similar but achieves a bit higher public LB score. 
+
+- Don't forget to properly validate your solutions, before adding those postprocessing extra steps to your pipelines.
+
+### This notebook is based on
+https://www.kaggle.com/its7171/2class-object-detection-inference
+
+### 2Class Object Detection Inference with filtering: Here is another version with filtering: 
+https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
+
+
+
+-----
 
 ## Progress
 
