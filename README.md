@@ -58,19 +58,18 @@ The player track file in .csv format includes player position, direction, and or
 -------
 
 ## Detects 2 class objects by tito
+- class1: helmet without impact
 
-### class1: helmet without impact
-### class2: helmet with impact
+- class2: helmet with impact
 
-### Training part:
-2Class Object Detection Training
+### Training part: 2Class Object Detection Training
+https://www.kaggle.com/its7171/2class-object-detection-training
 
-https://www.kaggle.com/its7171/2class-object-detection-training/
 
-### Inference part:
-2Class Object Detection Inference
-
+### Inference part: 2Class Object Detection Inference
 https://www.kaggle.com/its7171/2class-object-detection-inference
+
+-------
 
 ### Object Detection part
 : based on EfficientDet notebook for global wheat detection competition by shonenkov, which is using github repos efficientdet-pytorch by @rwightman.
