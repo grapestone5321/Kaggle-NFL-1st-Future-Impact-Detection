@@ -34,6 +34,19 @@ To submit, simply add these three lines at the end of your code:
      env = nflimpact.make_env()
      env.predict(df) # df is a pandas dataframe of your entire submission file
 
+### The dataframe should be in the following format: 
+
+Each row in your submission represents a single predicted bounding box for the given frame. 
+
+Note that it is not required to include labels of which players had an impact, only a bounding box where it occurred.
+
+     gameKey,playID,view,video,frame,left,width,top,height
+     57590,3607,Endzone,57590_003607_Endzone.mp4,1,1,1,1,1
+     57590,3607,Sideline,57590_003607_Sideline.mp4,1,1,1,1,1
+     57595,1252,Endzone,57595_001252_Endzone.mp4,1,1,1,1,1
+     57595,1252,Sideline,57595_001252_Sideline.mp4,1,1,1,1,1
+     etc.
+
 -------
 
 ## Data Overview
