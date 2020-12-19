@@ -83,8 +83,6 @@ In “EfficientDet: Scalable and Efficient Object Detection”, accepted at CVPR
 
 Building upon our previous work on scaling neural networks (EfficientNet), and incorporating a novel bi-directional feature network (BiFPN) and new scaling rules, EfficientDet achieves state-of-the-art accuracy while being up to 9x smaller and using significantly less computation compared to prior state-of-the-art detectors. 
 
-The following figure shows the overall network architecture of our models.
-
 ## Paper
 
 ### EfficientDet: Scalable and Efficient Object Detection
