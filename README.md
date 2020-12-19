@@ -69,29 +69,7 @@ The player track file in .csv format includes player position, direction, and or
 
 -------
 
-# Detects 2 class objects by tito
-Object Detection part is based on EfficientDet notebook for global wheat detection competition by shonenkov,  which is using github repos efficientdet-pytorch by @rwightman.
 
-- class1: helmet without impact
-
-- class2: helmet with impact
-### global wheat detection competition by shonenkov
-
-- [Training] EfficientDet
-
-https://www.kaggle.com/shonenkov/training-efficientdet
-
-- [Inference] EfficientDet
-
-https://www.kaggle.com/shonenkov/inference-efficientdet/data
-
-### github repos efficientdet-pytorch by @rwightman
-- rwightman/pytorch-image-models
-
-https://github.com/rwightman/pytorch-image-models
-
-
--------
 
 # EfficientDet
 
@@ -121,6 +99,31 @@ https://arxiv.org/pdf/1905.11946.pdf
 https://github.com/google/automl/tree/master/efficientdet
 
 -------
+
+# Detects 2 class objects by tito
+Object Detection part is based on EfficientDet notebook for global wheat detection competition by shonenkov,  which is using github repos efficientdet-pytorch by @rwightman.
+
+- class1: helmet without impact
+
+- class2: helmet with impact
+### global wheat detection competition by shonenkov
+
+- [Training] EfficientDet
+
+https://www.kaggle.com/shonenkov/training-efficientdet
+
+- [Inference] EfficientDet
+
+https://www.kaggle.com/shonenkov/inference-efficientdet/data
+
+### github repos efficientdet-pytorch by @rwightman
+- rwightman/pytorch-image-models
+
+https://github.com/rwightman/pytorch-image-models
+
+
+-------
+
 
 ### Training part: 2Class Object Detection Training
 https://www.kaggle.com/its7171/2class-object-detection-training
