@@ -61,13 +61,21 @@ The player track file in .csv format includes player position, direction, and or
 
 -------
 
-## Detects 2 class objects by tito
-### Object Detection part is based on EfficientDet notebook for global wheat detection competition by shonenkov, 
-### which is using github repos efficientdet-pytorch by @rwightman.
+# Detects 2 class objects by tito
+Object Detection part is based on EfficientDet notebook for global wheat detection competition by shonenkov,  which is using github repos efficientdet-pytorch by @rwightman.
 
 - class1: helmet without impact
 
 - class2: helmet with impact
+### global wheat detection competition by shonenkov
+
+- [Training] EfficientDet
+
+https://www.kaggle.com/shonenkov/training-efficientdet
+
+- [Inference] EfficientDet
+
+https://www.kaggle.com/shonenkov/inference-efficientdet/data
 
 ### github repos efficientdet-pytorch by @rwightman
 - rwightman/pytorch-image-models
@@ -75,18 +83,12 @@ The player track file in .csv format includes player position, direction, and or
 https://github.com/rwightman/pytorch-image-models
 
 
-
-### [Training] EfficientDet
-https://www.kaggle.com/shonenkov/training-efficientdet
-
 -------
 
 ## Paper
 
 ### EfficientDet: Scalable and Efficient Object Detection
 https://arxiv.org/pdf/1911.09070.pdf
-
-
 
 
 
