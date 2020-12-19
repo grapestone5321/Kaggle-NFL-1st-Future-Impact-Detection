@@ -93,12 +93,16 @@ https://github.com/rwightman/pytorch-image-models
 
 -------
 
+# EfficientDet
+
 ## Paper
 
 ### EfficientDet: Scalable and Efficient Object Detection
 https://arxiv.org/pdf/1911.09070.pdf
 
-
+## GitHub
+### EfficientDet
+https://github.com/google/automl/tree/master/efficientdet
 
 -------
 
