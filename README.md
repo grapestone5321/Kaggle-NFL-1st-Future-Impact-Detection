@@ -100,6 +100,10 @@ https://github.com/rwightman/pytorch-image-models
 ### EfficientDet: Scalable and Efficient Object Detection
 https://arxiv.org/pdf/1911.09070.pdf
 
+### EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
+https://arxiv.org/pdf/1905.11946.pdf
+
+
 ## GitHub
 ### EfficientDet
 https://github.com/google/automl/tree/master/efficientdet
