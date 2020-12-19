@@ -74,7 +74,18 @@ The player track file in .csv format includes player position, direction, and or
 ### [Training] EfficientDet
 https://www.kaggle.com/shonenkov/training-efficientdet
 
-------
+-------
+
+## Paper
+
+### EfficientDet: Scalable and Efficient Object Detection
+https://arxiv.org/pdf/1911.09070.pdf
+
+
+
+
+
+-------
 
 ### Training part: 2Class Object Detection Training
 https://www.kaggle.com/its7171/2class-object-detection-training
