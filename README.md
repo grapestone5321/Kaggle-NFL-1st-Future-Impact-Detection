@@ -67,13 +67,6 @@ Tracking data for all players that participate in the provided 60 plays.
 
 The player track file in .csv format includes player position, direction, and orientation data for each player during the entire course of the play collected using the Next Gen Stats (NGS) system. This data is indexed by gameKey, playID, and player, with the time variable providing a temporal index within an individual play.
 
-
--------
-
-## Progress
-
-### Current BestLB Score: 0.1329
-
 -------
 
 # Detects 2 class objects by tito
@@ -135,6 +128,14 @@ https://www.kaggle.com/its7171/nfl-models
 - efficientdet_d5-ef44aea8.pth
 
 -------
+
+
+## Progress
+
+### Current Best LB Score: 0.2260
+
+-------
+
 
 
 
