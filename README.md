@@ -173,6 +173,28 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 
 ### Current Best LB Score: 0.2260
 
+#################
+# SET CONSTANTS
+#################
+
+##　DETECTION_THRESHOLD 
+
+     DETECTION_THRESHOLD = 0.4
+     DETECTION_THRESHOLD = 0.5
+     DETECTION_THRESHOLD = 0.3
+
+     DETECTION_THRESHOLD = 0.35
+     DETECTION_THRESHOLD = 0.39
+     DETECTION_THRESHOLD = 0.38
+     DETECTION_THRESHOLD = 0.389
+     DETECTION_THRESHOLD = 0.388
+     
+## DETECTOR_FILTERING_THRESHOLD     
+     
+     DETECTOR_FILTERING_THRESHOLD = 0.3
+     DETECTOR_FILTERING_THRESHOLD = 0.4
+     DETECTOR_FILTERING_THRESHOLD = 0.2
+
 -------
 
 
