@@ -159,7 +159,7 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
 - Don't forget to properly validate your solutions, before adding those postprocessing extra steps to your pipelines.
 
-### This notebook is based on
+### both zones 2Class Object Detection strict filter
 https://www.kaggle.com/its7171/2class-object-detection-inference
 
 ### 2Class Object Detection Inference with filtering: Here is another version with filtering: 
@@ -175,25 +175,37 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 
 
 ## SET CONSTANTS
+### Baboth zones 2Class Object Detection strict filter:
 
-### DETECTION_THRESHOLD 
+### DETECTION_THRESHOLD: default=0.4
+
+:DETECTOR_FILTERING_THRESHOLD = 0.3
      
-     DETECTION_THRESHOLD = 0.5    #LB= 0.0439
-     DETECTION_THRESHOLD = 0.4    #LB= 0.2260
-     DETECTION_THRESHOLD = 0.39   #LB= 0.2352
-     DETECTION_THRESHOLD = 0.389  #LB= 0.2393  --- best
-     DETECTION_THRESHOLD = 0.3885 #LB= 0.2393  --- best
-     DETECTION_THRESHOLD = 0.388  #LB= 0.2393  --- best
-     DETECTION_THRESHOLD = 0.387  #LB= 0.2352
-     DETECTION_THRESHOLD = 0.38   #LB= 0.2170
-     DETECTION_THRESHOLD = 0.35   #LB= 0.1939
-     DETECTION_THRESHOLD = 0.3    #LB= 0.1608
+     DETECTION_THRESHOLD = 0.5:    test_df.shape = (52, 6)  #LB= 0.0439   ##ver4
+     DETECTION_THRESHOLD = 0.4:    test_df.shape =          #LB= 0.2260
+     DETECTION_THRESHOLD = 0.39:   test_df.shape =          #LB= 0.2352
+     DETECTION_THRESHOLD = 0.389:  test_df.shape =          #LB= 0.2393            --- best
+     DETECTION_THRESHOLD = 0.3885: test_df.shape = (396, 6) #LB= 0.2393   ##ver12  --- best
+     DETECTION_THRESHOLD = 0.388:  test_df.shape =          #LB= 0.2393            --- best
+     DETECTION_THRESHOLD = 0.387:  test_df.shape =          #LB= 0.2352
+     DETECTION_THRESHOLD = 0.38:   test_df.shape =          #LB= 0.2170
+     DETECTION_THRESHOLD = 0.35:   test_df.shape =          #LB= 0.1939
+     DETECTION_THRESHOLD = 0.3:    test_df.shape =          #LB= 0.1608
      
-### DETECTOR_FILTERING_THRESHOLD     
-     
-     DETECTOR_FILTERING_THRESHOLD = 0.4    #LB= 0.2260
-     DETECTOR_FILTERING_THRESHOLD = 0.3    #LB= 0.2260
-     DETECTOR_FILTERING_THRESHOLD = 0.2    #LB= 0.2260
+### DETECTOR_FILTERING_THRESHOLD: default=0.3     
+
+:DETECTION_THRESHOLD = 0.3885
+     DETECTOR_FILTERING_THRESHOLD = 0.9: test_df.shape = (0, 6)      #LB= 0.0000   ##ver13
+     DETECTOR_FILTERING_THRESHOLD = 0.7: test_df.shape = (0, 6)      #LB=          ##ver15
+     DETECTOR_FILTERING_THRESHOLD = 0.5: test_df.shape = (52, 6)     #LB=          ##ver16
+     DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (396, 6)    #LB= 0.2393   ##ver12
+     DETECTOR_FILTERING_THRESHOLD = 0.1: test_df.shape = (396, 6)    #LB=          ##ver17
+     DETECTOR_FILTERING_THRESHOLD = 0.01:test_df.shape = (396, 6)    #LB=          ##ver18
+
+:DETECTION_THRESHOLD = 0.4
+     DETECTOR_FILTERING_THRESHOLD = 0.4: test_df.shape = (336, 6)    #LB= 0.2260   ##ver2
+     DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (336, 6)    #LB= 0.2260   ##ver1
+     DETECTOR_FILTERING_THRESHOLD = 0.2: test_df.shape = (336, 6)    #LB= 0.2260   ##ver3
 
 -------
 
