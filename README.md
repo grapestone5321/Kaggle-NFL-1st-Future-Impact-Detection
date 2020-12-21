@@ -177,13 +177,12 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 ## SET CONSTANTS
 
 ### DETECTION_THRESHOLD 
-
      
      DETECTION_THRESHOLD = 0.5    #LB= 0.0439
      DETECTION_THRESHOLD = 0.4    #LB= 0.2260
      DETECTION_THRESHOLD = 0.39   #LB= 0.2352
      DETECTION_THRESHOLD = 0.389  #LB= 0.2393  --- best
-     DETECTION_THRESHOLD = 0.3885 #LB= 
+     DETECTION_THRESHOLD = 0.3885 #LB= 0.2393  --- best
      DETECTION_THRESHOLD = 0.388  #LB= 0.2393  --- best
      DETECTION_THRESHOLD = 0.387  #LB= 0.2352
      DETECTION_THRESHOLD = 0.38   #LB= 0.2170
