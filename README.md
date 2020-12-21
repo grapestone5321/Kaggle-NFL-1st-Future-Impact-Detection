@@ -195,6 +195,7 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 ### DETECTOR_FILTERING_THRESHOLD: default=0.3     
 
 :DETECTION_THRESHOLD = 0.3885
+
      DETECTOR_FILTERING_THRESHOLD = 0.9: test_df.shape = (0, 6)      #LB= 0.0000   ##ver13
      DETECTOR_FILTERING_THRESHOLD = 0.7: test_df.shape = (0, 6)      #LB=          ##ver15
      DETECTOR_FILTERING_THRESHOLD = 0.5: test_df.shape = (52, 6)     #LB=          ##ver16
@@ -203,6 +204,7 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
      DETECTOR_FILTERING_THRESHOLD = 0.01:test_df.shape = (396, 6)    #LB=          ##ver18
 
 :DETECTION_THRESHOLD = 0.4
+
      DETECTOR_FILTERING_THRESHOLD = 0.4: test_df.shape = (336, 6)    #LB= 0.2260   ##ver2
      DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (336, 6)    #LB= 0.2260   ##ver1
      DETECTOR_FILTERING_THRESHOLD = 0.2: test_df.shape = (336, 6)    #LB= 0.2260   ##ver3
