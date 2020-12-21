@@ -211,13 +211,20 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 
 
 
-## score_threshold:  default=0.3
+## score_threshold:  default=0.5
+### Note:box_list, score_list = make_predictions(images, score_threshold=DETECTION_THRESHOLD)
 
      def make_predictions(images, score_threshold=0.5):   #LB= 0.2393   ##ver12
      def make_predictions(images, score_threshold=0.4):   #LB= 0.2393   ##ver19
 
 
-
+## batch_size: default=16,
+:data_loader = DataLoader(
+   
+     batch_size = 16:   #LB= 0.2393   ##ver12
+     batch_size = 32:   #LB=          ##ver21
+    
+    
 -------
 
 
