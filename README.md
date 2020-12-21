@@ -209,6 +209,15 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
      DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (336, 6)    #LB= 0.2260   ##ver1
      DETECTOR_FILTERING_THRESHOLD = 0.2: test_df.shape = (336, 6)    #LB= 0.2260   ##ver3
 
+
+
+## score_threshold:  default=0.3
+
+     def make_predictions(images, score_threshold=0.5):   #LB= 0.2393   ##ver12
+     def make_predictions(images, score_threshold=0.4):   #LB= 0.2393   ##ver19
+
+
+
 -------
 
 
