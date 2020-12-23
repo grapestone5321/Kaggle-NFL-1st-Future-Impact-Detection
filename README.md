@@ -222,7 +222,8 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 :data_loader = DataLoader(
    
      batch_size = 16:   #LB= 0.2393   ##ver12
-     batch_size = 32:   #LB=          ##ver21
+     batch_size = 32:   #LB= 0.2393   ##ver21
+     batch_size = 64:   #LB=          ##ver22
     
     
 -------
