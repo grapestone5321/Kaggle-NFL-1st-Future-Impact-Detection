@@ -228,7 +228,16 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
      batch_size = 128:   #LB= 0.2393    ##ver23
      batch_size = 256:   #LB= error     ##ver24
     
-    
+## num_workers: default=4,
+:data_loader = DataLoader(
+   
+     num_workers =  2:   #LB= 0.2393    ##ver26
+     num_workers =  4:   #LB= 0.2393    ##ver12
+     num_workers =  8:   #LB= 0.2393    ##ver
+     
+     
+     
+     
 -------
 
 
