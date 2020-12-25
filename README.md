@@ -197,10 +197,10 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 :DETECTION_THRESHOLD = 0.3885
 
      DETECTOR_FILTERING_THRESHOLD = 0.9: test_df.shape = (0, 6)      #LB= 0.0000   ##ver13
-     DETECTOR_FILTERING_THRESHOLD = 0.7: test_df.shape = (0, 6)      #LB=          ##ver15
-     DETECTOR_FILTERING_THRESHOLD = 0.5: test_df.shape = (52, 6)     #LB=          ##ver16
+     DETECTOR_FILTERING_THRESHOLD = 0.7: test_df.shape = (0, 6)      #LB= 0.0000   ##ver15
+     DETECTOR_FILTERING_THRESHOLD = 0.5: test_df.shape = (52, 6)     #LB= 0.0439   ##ver16
      DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (396, 6)    #LB= 0.2393   ##ver12
-     DETECTOR_FILTERING_THRESHOLD = 0.1: test_df.shape = (396, 6)    #LB=          ##ver17
+     DETECTOR_FILTERING_THRESHOLD = 0.1: test_df.shape = (396, 6)    #LB= 0.2393   ##ver17
      DETECTOR_FILTERING_THRESHOLD = 0.01:test_df.shape = (396, 6)    #LB= 0.2393   ##ver18
 
 :DETECTION_THRESHOLD = 0.4
@@ -218,7 +218,7 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
      def make_predictions(images, score_threshold=0.4):   #LB= 0.2393   ##ver19
 
 
-## batch_size: default=16,
+## batch_size: default=16
 :data_loader = DataLoader(
    
      batch_size =   8:   #LB= 0.2393    ##ver25
@@ -228,14 +228,22 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
      batch_size = 128:   #LB= 0.2393    ##ver23
      batch_size = 256:   #LB= error     ##ver24
     
-## num_workers: default=4,
+## num_workers: default=4
 :data_loader = DataLoader(
    
      num_workers =  2:   #LB= 0.2393    ##ver26
      num_workers =  4:   #LB= 0.2393    ##ver12
-     num_workers =  8:   #LB= 0.2393    ##ver
+     num_workers =  8:   #LB= 0.2393    ##ver27
      
+## shuffle: default=False
+
+    shuffle = False:    #LB= 0.2393    ##ver12    
+    shuffle = True:     #LB= 0.2393    ##ver28 
      
+## drop_last=False,: default=False
+
+    drop_last=False:    #LB= 0.2393    ##ver12    
+    drop_last=True:     #LB=           ##ver28     
      
      
 -------
