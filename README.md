@@ -264,10 +264,13 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
      
 -------
 
-## Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation
+## Paper-2
+
+### Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation
 https://arxiv.org/pdf/1802.02611.pdf
 
 
-
+### Rethinking Atrous Convolution for Semantic Image Segmentation
+https://arxiv.org/pdf/1706.05587.pdf
 
 
