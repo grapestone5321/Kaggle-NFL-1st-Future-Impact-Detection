@@ -188,18 +188,17 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 
 :DETECTOR_FILTERING_THRESHOLD = 0.3
      
-     DETECTION_THRESHOLD = 0.5:    test_df.shape = (52, 6)  #LB= 0.0439   ##ver4
-     DETECTION_THRESHOLD = 0.4:    test_df.shape =          #LB= 0.2260
-     DETECTION_THRESHOLD = 0.39:   test_df.shape =          #LB= 0.2352
-     DETECTION_THRESHOLD = 0.3895: test_df.shape =          #LB= 0.2393            --- best
-     DETECTION_THRESHOLD = 0.389:  test_df.shape =          #LB= 0.2393            --- best
-     DETECTION_THRESHOLD = 0.3885: test_df.shape = (396, 6) #LB= 0.2393   ##ver12  --- best
-     DETECTION_THRESHOLD = 0.388:  test_df.shape =          #LB= 0.2393            --- best
-     DETECTION_THRESHOLD = 0.3875: test_df.shape =          #LB= 0.2393            --- best
-     DETECTION_THRESHOLD = 0.387:  test_df.shape =          #LB= 0.2352
-     DETECTION_THRESHOLD = 0.38:   test_df.shape =          #LB= 0.2170
-     DETECTION_THRESHOLD = 0.35:   test_df.shape =          #LB= 0.1939
-     DETECTION_THRESHOLD = 0.3:    test_df.shape =          #LB= 0.1608
+     DETECTION_THRESHOLD = 0.5:    test_df.shape = (52, 6)   #LB= 0.0439  ##ver4
+     DETECTION_THRESHOLD = 0.4:    test_df.shape = (336, 6)  #LB= 0.2260  ##ver1
+     DETECTION_THRESHOLD = 0.3895: test_df.shape = (391, 6)  #LB= 0.2393  ##ver30  --- best
+     DETECTION_THRESHOLD = 0.389:  test_df.shape = (393, 6)  #LB= 0.2393  ##ver9   --- best
+     DETECTION_THRESHOLD = 0.3885: test_df.shape = (396, 6)  #LB= 0.2393  ##ver12  --- best
+     DETECTION_THRESHOLD = 0.388:  test_df.shape = (397, 6)  #LB= 0.2393  ##ver10  --- best
+     DETECTION_THRESHOLD = 0.3875: test_df.shape = (399, 6)  #LB= 0.2393  ##ver31  --- best
+     DETECTION_THRESHOLD = 0.387:  test_df.shape = (404, 6)  #LB= 0.2352  ##ver11
+     DETECTION_THRESHOLD = 0.38:   test_df.shape = (444, 6)  #LB= 0.2170  ##ver8
+     DETECTION_THRESHOLD = 0.35:   test_df.shape = (638, 6)  #LB= 0.1939  ##ver6
+     DETECTION_THRESHOLD = 0.3:    test_df.shape = (1104, 6) #LB= 0.1608  ##ver5
      
 ### DETECTOR_FILTERING_THRESHOLD: default=0.3     
 
