@@ -252,7 +252,7 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 ## drop_last=False,: default=False
 
     drop_last=False:    #LB= 0.2393    ##ver12    
-    drop_last=True:     #LB=           ##ver28     
+    drop_last=True:     #LB= 0.2393    ##ver29     
      
      
 -------
