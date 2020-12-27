@@ -199,23 +199,30 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
      DETECTION_THRESHOLD = 0.38:   test_df.shape = (444, 6)  #LB= 0.2170  ##ver8
      DETECTION_THRESHOLD = 0.35:   test_df.shape = (638, 6)  #LB= 0.1939  ##ver6
      DETECTION_THRESHOLD = 0.3:    test_df.shape = (1104, 6) #LB= 0.1608  ##ver5
-     
-### DETECTOR_FILTERING_THRESHOLD: default=0.3     
 
-:DETECTION_THRESHOLD = 0.3885
 
-     DETECTOR_FILTERING_THRESHOLD = 0.9: test_df.shape = (0, 6)      #LB= 0.0000   ##ver13
-     DETECTOR_FILTERING_THRESHOLD = 0.7: test_df.shape = (0, 6)      #LB= 0.0000   ##ver15
-     DETECTOR_FILTERING_THRESHOLD = 0.5: test_df.shape = (52, 6)     #LB= 0.0439   ##ver16
-     DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (396, 6)    #LB= 0.2393   ##ver12
-     DETECTOR_FILTERING_THRESHOLD = 0.1: test_df.shape = (396, 6)    #LB= 0.2393   ##ver17
-     DETECTOR_FILTERING_THRESHOLD = 0.01:test_df.shape = (396, 6)    #LB= 0.2393   ##ver18
+### DETECTOR_FILTERING_THRESHOLD: default=0.3
 
 :DETECTION_THRESHOLD = 0.4
 
      DETECTOR_FILTERING_THRESHOLD = 0.4: test_df.shape = (336, 6)    #LB= 0.2260   ##ver2
      DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (336, 6)    #LB= 0.2260   ##ver1
      DETECTOR_FILTERING_THRESHOLD = 0.2: test_df.shape = (336, 6)    #LB= 0.2260   ##ver3
+
+:DETECTION_THRESHOLD = 0.3885
+
+     DETECTOR_FILTERING_THRESHOLD = 0.9: test_df.shape = (0, 6)      #LB= 0.0000   ##ver13
+     DETECTOR_FILTERING_THRESHOLD = 0.7: test_df.shape = (0, 6)      #LB= 0.0000   ##ver15
+     DETECTOR_FILTERING_THRESHOLD = 0.5: test_df.shape = (52, 6)     #LB= 0.0439   ##ver16
+     DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (396, 6)    #LB= 0.2393   ##ver12  --- best
+     DETECTOR_FILTERING_THRESHOLD = 0.1: test_df.shape = (396, 6)    #LB= 0.2393   ##ver17  --- best
+     DETECTOR_FILTERING_THRESHOLD = 0.01:test_df.shape = (396, 6)    #LB= 0.2393   ##ver18  --- best
+
+:DETECTION_THRESHOLD = 0.38
+
+     DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (444, 6)   #LB= 0.2170  ##ver8
+     DETECTOR_FILTERING_THRESHOLD = 0.2: test_df.shape = (444, 6)   #LB= 0.2170  ##ver33
+     DETECTOR_FILTERING_THRESHOLD = 0.01:test_df.shape =            #LB=         ##ver34
 
 
 
