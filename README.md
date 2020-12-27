@@ -269,8 +269,10 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 ### Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation
 https://arxiv.org/pdf/1802.02611.pdf
 
-
 ### Rethinking Atrous Convolution for Semantic Image Segmentation
 https://arxiv.org/pdf/1706.05587.pdf
 
+### DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs
+https://arxiv.org/pdf/1606.00915.pdf
 
+-------
