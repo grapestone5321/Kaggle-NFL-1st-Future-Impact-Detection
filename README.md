@@ -171,6 +171,7 @@ https://www.kaggle.com/its7171/nfl-models
 - efficientdet_d5-ef44aea8.pth
 
 -------
+
 ## 2Class Object Detection strict filter: by Art
 ### both zones 2Class Object Detection strict filter
 https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
@@ -181,11 +182,86 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
 - Don't forget to properly validate your solutions, before adding those postprocessing extra steps to your pipelines.
 
-### both zones 2Class Object Detection strict filter
+### 2Class Object Detection Inference
 https://www.kaggle.com/its7171/2class-object-detection-inference
 
 ### 2Class Object Detection Inference with filtering: Here is another version with filtering: 
 https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
+
+-------
+
+## Process: both zones 2Class Object Detection strict filter
+
+### def seed_everything(seed):
+
+### SET CONSTANTS
+
+### def mk_images(video_name, video_labels, video_dir, out_dir, only_with_impact=True):
+
+### if IS_PRIVATE:
+
+### def get_valid_transforms():
+
+### class DatasetRetriever(Dataset):
+
+### def load_net(checkpoint_path):
+
+### if IS_PRIVATE:
+
+### dataset = DatasetRetriever(
+
+### def collate_fn(batch):
+
+### data_loader = DataLoader
+
+### def make_predictions(images, score_threshold=0.5):
+
+## check prediction
+
+### cnt = 0
+
+### result_image_ids = []
+### results_boxes = []
+### results_scores = []
+
+### box_df = pd.DataFrame(np.concatenate(results_boxes), columns=['left', 'top', 'width', 'height'])
+### test_df = pd.DataFrame({'scores':np.concatenate(results_scores), 'image_name':result_image_ids})
+### test_df = pd.concat([test_df, box_df], axis=1)
+
+### test_df = test_df[test_df.scores > DETECTOR_FILTERING_THRESHOLD]
+
+### test_df.shape
+
+### test_df
+
+
+## FILTER
+
+
+
+### dropIDX = []
+### for keys in test_df.groupby(['gameKey', 'playID']).size().to_dict().keys():
+
+### test_df = test_df.drop(index = dropIDX).reset_index(drop = True)
+
+### !mv * /tmp/
+
+### import nflimpact
+### env = nflimpact.make_env()
+
+### if IS_PRIVATE:
+
+     env.predict(test_df) # df is a pandas dataframe of your entire submission file
+
+### else:
+
+     sub = pd.read_csv('../input/nfl-impact-detection/sample_submission.csv')
+     env.predict(sub)
+
+
+
+
+
 
 
 
