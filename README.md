@@ -374,6 +374,7 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
      DETECTOR_FILTERING_THRESHOLD = 0.9: test_df.shape = (0, 6)      #LB= 0.0000   ##ver13
      DETECTOR_FILTERING_THRESHOLD = 0.7: test_df.shape = (0, 6)      #LB= 0.0000   ##ver15
      DETECTOR_FILTERING_THRESHOLD = 0.5: test_df.shape = (52, 6)     #LB= 0.0439   ##ver16
+     DETECTOR_FILTERING_THRESHOLD = 0.4: test_df.shape =             #LB=          ##ver39
      DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (396, 6)    #LB= 0.2393   ##ver12  --- best
      DETECTOR_FILTERING_THRESHOLD = 0.1: test_df.shape = (396, 6)    #LB= 0.2393   ##ver17  --- best
      DETECTOR_FILTERING_THRESHOLD = 0.01:test_df.shape = (396, 6)    #LB= 0.2393   ##ver18  --- best
@@ -388,6 +389,7 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 DETECTION_THRESHOLD = 0.3:    
 
      DETECTOR_FILTERING_THRESHOLD = 0.5: test_df.shape = (52, 6)   #LB= 0.0439  ##ver36
+     DETECTOR_FILTERING_THRESHOLD = 0.4: test_df.shape = (336, 6)  #LB= 0.2260  ##ver38
      DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (1104, 6) #LB= 0.1608  ##ver5
      DETECTOR_FILTERING_THRESHOLD = 0.01:test_df.shape = (1104, 6) #LB= 0.1608  ##ver37
      
