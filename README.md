@@ -201,7 +201,7 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
      DETECTION_THRESHOLD = 0.4  ##default
      DETECTOR_FILTERING_THRESHOLD = 0.3  ##default
 
-## data_loader
+## mk_images
 
      def mk_images(video_name, video_labels, video_dir, out_dir, only_with_impact=True):
 
@@ -211,9 +211,23 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
      class DatasetRetriever(Dataset):
 
-     def load_net(checkpoint_path):
+## load_net
 
+     def load_net(checkpoint_path):
+         config = get_efficientdet_config('tf_efficientdet_d5')
+         net = EfficientDet(config, pretrained_backbone=False)
+         config.num_classes = 2
+         config.image_size=512
+         net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.001, momentum=.01))
+         checkpoint = torch.load(checkpoint_path)
+         net.load_state_dict(checkpoint['model_state_dict'])
+         net = DetBenchEval(net, config)
+         net.eval();
+         return net.cuda()
      if IS_PRIVATE:
+         net = load_net('../input/nfl-models//best-checkpoint-002epoch.bin')
+
+## dataset
 
      dataset = DatasetRetriever(
 
