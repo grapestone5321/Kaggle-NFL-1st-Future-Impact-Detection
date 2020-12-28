@@ -194,30 +194,32 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 ## both zones 2Class Object Detection strict filter
 https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
-### def seed_everything(seed):
+## def seed_everything(seed):
 
-### SET CONSTANTS
+## SET CONSTANTS
 
      DETECTION_THRESHOLD = 0.4  ##default
      DETECTOR_FILTERING_THRESHOLD = 0.3  ##default
 
-### def mk_images(video_name, video_labels, video_dir, out_dir, only_with_impact=True):
+## data_loader
 
-### if IS_PRIVATE:
+     def mk_images(video_name, video_labels, video_dir, out_dir, only_with_impact=True):
 
-### def get_valid_transforms():
+     if IS_PRIVATE:
 
-### class DatasetRetriever(Dataset):
+     def get_valid_transforms():
 
-### def load_net(checkpoint_path):
+     class DatasetRetriever(Dataset):
 
-### if IS_PRIVATE:
+     def load_net(checkpoint_path):
 
-### dataset = DatasetRetriever(
+     if IS_PRIVATE:
 
-### def collate_fn(batch):
+     dataset = DatasetRetriever(
 
-### data_loader = DataLoader
+     def collate_fn(batch):
+
+     data_loader = DataLoader
 
 ## make_predictions
 
@@ -264,19 +266,21 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
          if cnt >= 10:
              break
 
-### result_image_ids = []
-### results_boxes = []
-### results_scores = []
+## Results
 
-### box_df = pd.DataFrame(np.concatenate(results_boxes), columns=['left', 'top', 'width', 'height'])
-### test_df = pd.DataFrame({'scores':np.concatenate(results_scores), 'image_name':result_image_ids})
-### test_df = pd.concat([test_df, box_df], axis=1)
+     result_image_ids = []
+     results_boxes = []
+     results_scores = []
 
-### test_df = test_df[test_df.scores > DETECTOR_FILTERING_THRESHOLD]
+     box_df = pd.DataFrame(np.concatenate(results_boxes), columns=['left', 'top', 'width', 'height'])
+     test_df = pd.DataFrame({'scores':np.concatenate(results_scores), 'image_name':result_image_ids})
+     test_df = pd.concat([test_df, box_df], axis=1)
 
-### test_df.shape
+     rest_df = test_df[test_df.scores > DETECTOR_FILTERING_THRESHOLD]
 
-### test_df
+     test_df.shape
+     
+     test_df
 
 
 ## FILTER
@@ -293,36 +297,38 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
              bboxCount2 = tmp_df.query('view == "Endzone" and abs(frame - @currentFrame) <= 0').shape[0]
              if bboxCount1 != bboxCount2:
                  dropIDX.append(index)
-            
-### dropIDX = []
-### for keys in test_df.groupby(['gameKey', 'playID']).size().to_dict().keys():
 
-### test_df = test_df.drop(index = dropIDX).reset_index(drop = True)
+## dropIDX
 
-### !mv * /tmp/
+     dropIDX = []
+      for keys in test_df.groupby(['gameKey', 'playID']).size().to_dict().keys():
 
-### import nflimpact
-### env = nflimpact.make_env()
+     test_df = test_df.drop(index = dropIDX).reset_index(drop = True)
+ 
+      !mv * /tmp/
 
-### if IS_PRIVATE:
+## submission
 
-     env.predict(test_df) # df is a pandas dataframe of your entire submission file
+     import nflimpact
+     env = nflimpact.make_env()
 
-### else:
+     if IS_PRIVATE:
+          env.predict(test_df) # df is a pandas dataframe of your entire submission file
+     else:
+          sub = pd.read_csv('../input/nfl-impact-detection/sample_submission.csv')
+          env.predict(sub)
 
-     sub = pd.read_csv('../input/nfl-impact-detection/sample_submission.csv')
-     env.predict(sub)
 
-
------
+-------
 
 ## Progress
 
 ### Current Best LB Score: 0.2393
 
+-------
 
 ## SET CONSTANTS
-### Baboth zones 2Class Object Detection strict filter:
+### both zones 2Class Object Detection strict filter:
 
 ### DETECTION_THRESHOLD: default=0.4
 
