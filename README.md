@@ -198,6 +198,9 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
 ### SET CONSTANTS
 
+     DETECTION_THRESHOLD = 0.4  ##default
+     DETECTOR_FILTERING_THRESHOLD = 0.3  ##default
+
 ### def mk_images(video_name, video_labels, video_dir, out_dir, only_with_impact=True):
 
 ### if IS_PRIVATE:
