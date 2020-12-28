@@ -312,6 +312,23 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
              if bboxCount1 != bboxCount2:
                  dropIDX.append(index)
 
+## FILTER: 2Class Object Detection Inference with filtering
+
+     dropIDX = []
+     for keys in test_df.groupby(['gameKey', 'playID']).size().to_dict().keys():
+         tmp_df = test_df.query('gameKey == @keys[0] and playID == @keys[1]')
+    
+         for index, row in tmp_df.iterrows():
+             if row['view'] == 'Endzone':
+                 check_df = tmp_df.query('view == "Sideline"')
+                 if check_df['frame'].apply(lambda x: np.abs(x - row['frame']) <= 4).sum() == 0:
+                     dropIDX.append(index)
+        
+             if row['view'] == 'Sideline':
+                 check_df = tmp_df.query('view == "Endzone"')
+                 if check_df['frame'].apply(lambda x: np.abs(x - row['frame']) <= 4).sum() == 0:
+                     dropIDX.append(index)
+
 ## dropIDX
 
      dropIDX = []
