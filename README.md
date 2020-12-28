@@ -105,6 +105,21 @@ Our models also run 2x - 4x faster on GPU, and 5x - 11x faster on CPU than other
 
 -------
 
+## Paper-2
+
+### Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation
+https://arxiv.org/pdf/1802.02611.pdf
+
+### Rethinking Atrous Convolution for Semantic Image Segmentation
+https://arxiv.org/pdf/1706.05587.pdf
+
+### DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs
+https://arxiv.org/pdf/1606.00915.pdf
+
+-------
+
+
+
 # Detects 2 class objects by tito
 Object Detection part is based on EfficientDet notebook for global wheat detection competition by shonenkov,  which is using github repos efficientdet-pytorch by @rwightman.
 
@@ -271,15 +286,4 @@ DETECTION_THRESHOLD = 0.3:
      
 -------
 
-## Paper-2
 
-### Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation
-https://arxiv.org/pdf/1802.02611.pdf
-
-### Rethinking Atrous Convolution for Semantic Image Segmentation
-https://arxiv.org/pdf/1706.05587.pdf
-
-### DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs
-https://arxiv.org/pdf/1606.00915.pdf
-
--------
