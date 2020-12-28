@@ -190,7 +190,9 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 
 -------
 
-## Process: both zones 2Class Object Detection strict filter
+# Process: 
+## both zones 2Class Object Detection strict filter
+https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
 ### def seed_everything(seed):
 
@@ -237,8 +239,19 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 
 ## FILTER
 
+     dropIDX = []
+     for keys in test_df.groupby(['gameKey', 'playID']).size().to_dict().keys():
+         tmp_df = test_df.query('gameKey == @keys[0] and playID == @keys[1]')
+    
+         for index, row in tmp_df.iterrows():
+            
+             currentFrame = row['frame']
 
-
+             bboxCount1 = tmp_df.query('view == "Sideline" and abs(frame - @currentFrame) <= 0').shape[0]
+             bboxCount2 = tmp_df.query('view == "Endzone" and abs(frame - @currentFrame) <= 0').shape[0]
+             if bboxCount1 != bboxCount2:
+                 dropIDX.append(index)
+            
 ### dropIDX = []
 ### for keys in test_df.groupby(['gameKey', 'playID']).size().to_dict().keys():
 
@@ -257,12 +270,6 @@ https://www.kaggle.com/artkulak/2class-object-detection-inference-with-filtering
 
      sub = pd.read_csv('../input/nfl-impact-detection/sample_submission.csv')
      env.predict(sub)
-
-
-
-
-
-
 
 
 -----
