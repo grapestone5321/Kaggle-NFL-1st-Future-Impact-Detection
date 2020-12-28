@@ -219,11 +219,50 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
 ### data_loader = DataLoader
 
-### def make_predictions(images, score_threshold=0.5):
+## make_predictions
+
+     def make_predictions(images, score_threshold=0.5):
+         images = torch.stack(images).cuda().float()
+         box_list = []
+         score_list = []
+         with torch.no_grad():
+             det = net(images, torch.tensor([1]*images.shape[0]).float().cuda())
+             for i in range(images.shape[0]):
+                 boxes = det[i].detach().cpu().numpy()[:,:4]    
+                 scores = det[i].detach().cpu().numpy()[:,4]   
+                 label = det[i].detach().cpu().numpy()[:,5]
+                 # useing only label = 2
+                 indexes = np.where((scores > score_threshold) & (label == 2))[0]
+                 boxes[:, 2] = boxes[:, 2] + boxes[:, 0]
+                 boxes[:, 3] = boxes[:, 3] + boxes[:, 1]
+                 box_list.append(boxes[indexes])
+                 score_list.append(scores[indexes])
+         return box_list, score_list
+     import matplotlib.pyplot as plt
 
 ## check prediction
 
-### cnt = 0
+     cnt = 0
+     for images, image_ids in data_loader:
+         box_list, score_list = make_predictions(images, score_threshold=DETECTION_THRESHOLD)
+         for i in range(len(images)):
+             sample = images[i].permute(1,2,0).cpu().numpy()
+             boxes = box_list[i].astype(np.int32).clip(min=0, max=511)
+             scores = score_list[i]
+             if len(scores) >= 1:
+                 fig, ax = plt.subplots(1, 1, figsize=(16, 8))
+                 sample = cv2.resize(sample , (int(1280), int(720)))
+                 for box,score in zip(boxes,scores):
+                     box[0] = box[0] * 1280 / 512
+                     box[1] = box[1] * 720 / 512
+                     box[2] = box[2] * 1280 / 512
+                     box[3] = box[3] * 720 / 512
+                     cv2.rectangle(sample, (box[0], box[1]), (box[2], box[3]), (1, 0, 0), 3)
+                 ax.set_axis_off()
+                 ax.imshow(sample);
+                 cnt += 1
+         if cnt >= 10:
+             break
 
 ### result_image_ids = []
 ### results_boxes = []
