@@ -361,6 +361,10 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 ## SET CONSTANTS
 ### both zones 2Class Object Detection strict filter:
 
+-------
+
+## (DETECTION_THRESHOLD, DETECTOR_FILTERING_THRESHOLD) = (0.3885, 0.3) : Standard ##ver12
+
 ### DETECTION_THRESHOLD: default=0.4
 
 :DETECTOR_FILTERING_THRESHOLD = 0.3
@@ -418,7 +422,7 @@ DETECTION_THRESHOLD = 0.3:
      DETECTOR_FILTERING_THRESHOLD = 0.3:   test_df.shape = (1104, 6) #LB= 0.1608  ##ver5
      DETECTOR_FILTERING_THRESHOLD = 0.01:  test_df.shape = (1104, 6) #LB= 0.1608  ##ver37
      
-
+-------
 
 ## score_threshold:  default=0.5
 ### Note:box_list, score_list = make_predictions(images, score_threshold=DETECTION_THRESHOLD)
@@ -453,8 +457,20 @@ DETECTION_THRESHOLD = 0.3:
 
     drop_last=False:    #LB= 0.2393    ##ver12    
     drop_last=True:     #LB= 0.2393    ##ver29     
-     
-     
+          
 -------
+
+## FILTER:
+
+             #LB= 0.2393    ##ver12
+             bboxCount1 = tmp_df.query('view == "Sideline" and abs(frame - @currentFrame) <= 0').shape[0]
+             bboxCount2 = tmp_df.query('view == "Endzone" and abs(frame - @currentFrame) <= 0').shape[0]
+             
+             #LB=           ##ver48
+             bboxCount1 = tmp_df.query('view == "Sideline" and abs(frame - @currentFrame) <= 1').shape[0]
+             bboxCount2 = tmp_df.query('view == "Endzone" and abs(frame - @currentFrame) <= 1').shape[0]
+             
+             
+
 
 
