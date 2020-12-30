@@ -470,7 +470,7 @@ DETECTION_THRESHOLD = 0.3:
              bboxCount1 = tmp_df.query('view == "Sideline" and abs(frame - @currentFrame) <= 1').shape[0]
              bboxCount2 = tmp_df.query('view == "Endzone" and abs(frame - @currentFrame) <= 1').shape[0]
              
-             #LB=       : test_df.shape =             ##ver49
+             #LB= 0.1295: test_df.shape = (396, 6)    ##ver49
              bboxCount1 = tmp_df.query('view == "Sideline" and abs(frame - @currentFrame) < 0').shape[0]
              bboxCount2 = tmp_df.query('view == "Endzone" and abs(frame - @currentFrame) < 0').shape[0]
 
