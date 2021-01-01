@@ -118,7 +118,12 @@ https://arxiv.org/pdf/1606.00915.pdf
 
 -------
 
+## Paper-3
 
+### Microsoft COCO: Common Objects in Context
+https://arxiv.org/pdf/1405.0312.pdf
+
+-------
 
 # Detects 2 class objects by tito
 Object Detection part is based on EfficientDet notebook for global wheat detection competition by shonenkov,  which is using github repos efficientdet-pytorch by @rwightman.
