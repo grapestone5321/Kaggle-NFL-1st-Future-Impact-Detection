@@ -478,5 +478,20 @@ DETECTION_THRESHOLD = 0.3:
              bboxCount1 = tmp_df.query('view == "Sideline" and abs(frame - @currentFrame) < 0.1').shape[0]
              bboxCount2 = tmp_df.query('view == "Endzone" and abs(frame - @currentFrame) < 0.1').shape[0]
 
+## def load_net(checkpoint_path):
+
+### momentum: default=0.1
+     #LB= 0.2393: test_df.shape = (396, 6)    ##ver12
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.001, momentum=.01))
+     
+     #LB= 0.2393: test_df.shape = (396, 6)    ##ver51
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.001, momentum=.05))
+
+### eps: =.001
+
+     #LB=       : test_df.shape =             ##ver52
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.01, momentum=.01))
+
+
 
 -------
