@@ -509,7 +509,7 @@ DETECTION_THRESHOLD = 0.3:
      #LB=       : test_df.shape =             ##ver54
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0005, momentum=.01))
      
-     #LB=       : test_df.shape =             ##ver55
+     #LB= 0.2521: test_df.shape =             ##ver55
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.005, momentum=.01))
      
      #LB=       : test_df.shape =             ##ver56
