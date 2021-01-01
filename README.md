@@ -485,18 +485,24 @@ DETECTION_THRESHOLD = 0.3:
 
 ## def load_net(checkpoint_path):
 
-### momentum: default=0.1
-     #LB= 0.2393: test_df.shape = (396, 6)    ##ver12
+     #LB= 0.2393: test_df.shape = (396, 6)    ##ver12  ###default
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.001, momentum=.01))
-     
+
+### momentum: default=0.1
+    
      #LB= 0.2393: test_df.shape = (396, 6)    ##ver51
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.001, momentum=.05))
 
-### eps: =.001
+### eps: default=.001
 
      #LB= 0.1904: test_df.shape =  (245, 6)   ##ver52
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.01, momentum=.01))
 
-     #LB=       : test_df.shape =             ##ver53
+     #LB= 0.2352: test_df.shape =  (401, 6)   ##ver53
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0001, momentum=.01))
+     
+     #LB=       : test_df.shape =             ##ver54
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0005, momentum=.01))
+     
+     
 -------
