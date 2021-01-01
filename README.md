@@ -123,6 +123,11 @@ https://arxiv.org/pdf/1606.00915.pdf
 ### Microsoft COCO: Common Objects in Context
 https://arxiv.org/pdf/1405.0312.pdf
 
+
+### MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications
+https://arxiv.org/pdf/1704.04861.pdf
+
+
 -------
 
 # Detects 2 class objects by tito
