@@ -364,7 +364,9 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
 ## Progress
 
-### Current Best LB Score: 0.2393
+### Current Best LB Score: 0.2688
+     DETECTION_THRESHOLD = 0.3885: test_df.shape = (396, 6)
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.002, momentum=.01))
 
 -------
 
@@ -381,11 +383,11 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
      
      DETECTION_THRESHOLD = 0.5:    test_df.shape = (52, 6)   #LB= 0.0439  ##ver4
      DETECTION_THRESHOLD = 0.4:    test_df.shape = (336, 6)  #LB= 0.2260  ##ver1
-     DETECTION_THRESHOLD = 0.3895: test_df.shape = (391, 6)  #LB= 0.2393  ##ver30  --- best
-     DETECTION_THRESHOLD = 0.389:  test_df.shape = (393, 6)  #LB= 0.2393  ##ver9   --- best
-     DETECTION_THRESHOLD = 0.3885: test_df.shape = (396, 6)  #LB= 0.2393  ##ver12  --- best
-     DETECTION_THRESHOLD = 0.388:  test_df.shape = (397, 6)  #LB= 0.2393  ##ver10  --- best
-     DETECTION_THRESHOLD = 0.3875: test_df.shape = (399, 6)  #LB= 0.2393  ##ver31  --- best
+     DETECTION_THRESHOLD = 0.3895: test_df.shape = (391, 6)  #LB= 0.2393  ##ver30  
+     DETECTION_THRESHOLD = 0.389:  test_df.shape = (393, 6)  #LB= 0.2393  ##ver9   
+     DETECTION_THRESHOLD = 0.3885: test_df.shape = (396, 6)  #LB= 0.2393  ##ver12  --- new default
+     DETECTION_THRESHOLD = 0.388:  test_df.shape = (397, 6)  #LB= 0.2393  ##ver10  
+     DETECTION_THRESHOLD = 0.3875: test_df.shape = (399, 6)  #LB= 0.2393  ##ver31  
      DETECTION_THRESHOLD = 0.387:  test_df.shape = (404, 6)  #LB= 0.2352  ##ver11
      DETECTION_THRESHOLD = 0.38:   test_df.shape = (444, 6)  #LB= 0.2170  ##ver8
      DETECTION_THRESHOLD = 0.35:   test_df.shape = (638, 6)  #LB= 0.1939  ##ver6
@@ -406,9 +408,9 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
      DETECTOR_FILTERING_THRESHOLD = 0.7: test_df.shape = (0, 6)      #LB= 0.0000   ##ver15
      DETECTOR_FILTERING_THRESHOLD = 0.5: test_df.shape = (52, 6)     #LB= 0.0439   ##ver16
      DETECTOR_FILTERING_THRESHOLD = 0.4: test_df.shape = (336, 6)    #LB= 0.2260   ##ver39
-     DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (396, 6)    #LB= 0.2393   ##ver12  --- best
-     DETECTOR_FILTERING_THRESHOLD = 0.1: test_df.shape = (396, 6)    #LB= 0.2393   ##ver17  --- best
-     DETECTOR_FILTERING_THRESHOLD = 0.01:test_df.shape = (396, 6)    #LB= 0.2393   ##ver18  --- best
+     DETECTOR_FILTERING_THRESHOLD = 0.3: test_df.shape = (396, 6)    #LB= 0.2393   ##ver12  
+     DETECTOR_FILTERING_THRESHOLD = 0.1: test_df.shape = (396, 6)    #LB= 0.2393   ##ver17  
+     DETECTOR_FILTERING_THRESHOLD = 0.01:test_df.shape = (396, 6)    #LB= 0.2393   ##ver18  
 
 :DETECTION_THRESHOLD = 0.38
 
@@ -512,7 +514,7 @@ DETECTION_THRESHOLD = 0.3:
      #LB= 0.2521: test_df.shape = (353, 6)    ##ver55
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.005, momentum=.01))
      
-     #LB= 0.2688: test_df.shape = (393, 6)    ##ver56
+     #LB= 0.2688: test_df.shape = (393, 6)    ##ver56 --- best
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.002, momentum=.01))
      
      #LB=       : test_df.shape =             ##ver57
