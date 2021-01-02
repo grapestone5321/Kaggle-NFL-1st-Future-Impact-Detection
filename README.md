@@ -511,10 +511,13 @@ DETECTION_THRESHOLD = 0.3:
      #LB= 0.2607: test_df.shape = (385, 6)    ##ver58
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0025, momentum=.01))
      
-     #LB= : test_df.shape = )    ##ver60
+     #LB= : test_df.shape =     ##ver61
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0022, momentum=.01))    
+     
+     #LB= 0.2689: test_df.shape = (391, 6)    ##ver60
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0021, momentum=.01))
      
-     #LB= 0.2688: test_df.shape = (393, 6)    ##ver56 --- best
+     #LB= 0.2689: test_df.shape = (393, 6)    ##ver56 --- best
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.002, momentum=.01))
      
      #LB= 0.2393: test_df.shape = (395, 6)    ##ver59
