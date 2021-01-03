@@ -553,5 +553,15 @@ eps=.0020:
          
      #LB=       : test_df.shape = (393, 6)    ##ver66
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.001))
-               
+
+
+### check prediction
+
+     if cnt >= 10:
+     
+     if cnt >= 15:
+     
+     if cnt >= 50:
+    
+    
 -------
