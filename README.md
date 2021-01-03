@@ -525,13 +525,13 @@ eps=.0020:
      #LB= 0.2689: test_df.shape = (393, 6)    ##ver56 --- best
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.002, momentum=.01))
      
-     #LB= : test_df.shape = (393, 6)    ##ver63 --- best
+     #LB= 0.2689: test_df.shape = (393, 6)    ##ver63 --- best
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.01))
      
-     #LB= 0.2689: test_df.shape = (392, 6)   ##ver62 --- best
+     #LB= 0.2689: test_df.shape = (392, 6)    ##ver62 --- best
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0019, momentum=.01))
      
-     #LB= : test_df.shape = (392, 6)   ##ver64
+     #LB= 0.2689: test_df.shape = (392, 6)    ##ver64 --- best
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0018, momentum=.01))
      
      #LB= 0.2393: test_df.shape = (395, 6)    ##ver59
