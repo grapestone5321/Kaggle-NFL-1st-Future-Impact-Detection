@@ -489,18 +489,8 @@ DETECTION_THRESHOLD = 0.3:
              #LB= 0.2393: test_df.shape = (396, 6)    ##ver50
              bboxCount1 = tmp_df.query('view == "Sideline" and abs(frame - @currentFrame) < 0.1').shape[0]
              bboxCount2 = tmp_df.query('view == "Endzone" and abs(frame - @currentFrame) < 0.1').shape[0]
-    
-     #LB= 0.2393: test_df.shape = (396, 6)    ##ver51
-     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.001, momentum=.05))
-     
-eps=.0020: 
 
-     #LB= 0.2393: test_df.shape = (393, 6)    ##ver63
-     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.001, momentum=.01))
-     
-     #LB= : test_df.shape =    ##ver65
-     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.001, momentum=.1))
-     
+
 
 ### eps: default=.001
 
@@ -546,5 +536,19 @@ eps=.0020:
      #LB= 0.2352: test_df.shape =  (401, 6)   ##ver53
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0001, momentum=.01))
      
+### momentum: default=.01
+
+eps=.001:
+
+     #LB= 0.2393: test_df.shape = (396, 6)    ##ver51
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.001, momentum=.05))
      
+eps=.0020: 
+
+     #LB= 0.2689: test_df.shape = (393, 6)    ##ver63 --- best
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.01))
+     
+     #LB= : test_df.shape =    ##ver65
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.1))
+          
 -------
