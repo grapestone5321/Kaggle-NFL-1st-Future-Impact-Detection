@@ -364,9 +364,9 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
 ## Progress
 
-### Current Best LB Score: 0.2688
+### Current Best LB Score: 0.2689
      DETECTION_THRESHOLD = 0.3885: test_df.shape = (396, 6)
-     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.002, momentum=.01))
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.01))
 
 -------
 
@@ -548,7 +548,7 @@ eps=.001:
      
 eps=.0020: 
 
-     #LB=       : test_df.shape = (393, 6)    ##ver78
+     #LB= 0.2689: test_df.shape = (393, 6)    ##ver78
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.999))
      
      #LB= 0.2689: test_df.shape = (393, 6)    ##ver68
@@ -577,6 +577,9 @@ eps=.0020:
      
      #LB= 0.2689: test_df.shape = (393, 6)    ##ver71 --- best
      if cnt >= 50:
+     
+     #LB= 0.2689: test_df.shape = (393, 6)    ##ver77 --- best
+     if cnt >= 200
     
     
 -------
