@@ -545,6 +545,12 @@ eps=.001:
      
 eps=.0020: 
 
+     #LB=       : test_df.shape = (393, 6)    ##ver68
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.99))
+     
+     #LB=       : test_df.shape = (393, 6)    ##ver67
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.9))
+
      #LB= 0.2689: test_df.shape = (393, 6)    ##ver65
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.1))
      
@@ -557,10 +563,13 @@ eps=.0020:
 
 ### check prediction
 
+     #LB= 0.2689: test_df.shape = (393, 6)    ##ver63 --- best 
      if cnt >= 10:
      
+     #LB=       : test_df.shape = (393, 6)    ##ver70
      if cnt >= 15:
      
+     #LB= 0.2689: test_df.shape = (393, 6)    ##ver71 --- best
      if cnt >= 50:
     
     
