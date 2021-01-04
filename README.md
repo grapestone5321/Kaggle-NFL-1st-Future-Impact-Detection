@@ -452,6 +452,9 @@ DETECTION_THRESHOLD = 0.3:
      batch_size =  64:   #LB= 0.2393    ##ver22
      batch_size = 128:   #LB= 0.2393    ##ver23
      batch_size = 256:   #LB= error     ##ver24
+     
+     batch_size =  16:   #LB= 0.2689    ##ver56 --- best 
+     batch_size = 128:   #LB= 0.2689    ##ver76 --- best 
     
 ## num_workers: default=4
 :data_loader = DataLoader(
@@ -467,7 +470,7 @@ DETECTION_THRESHOLD = 0.3:
      
 ## drop_last=False,: default=False
 
-    drop_last=False:    #LB= 0.2393    ##ver12    
+    drop_last=False:    #LB= 0.2393    ##ver12   
     drop_last=True:     #LB= 0.2393    ##ver29     
           
 -------
@@ -545,7 +548,10 @@ eps=.001:
      
 eps=.0020: 
 
-     #LB=       : test_df.shape = (393, 6)    ##ver68
+     #LB=       : test_df.shape = (393, 6)    ##ver78
+     net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.999))
+     
+     #LB= 0.2689: test_df.shape = (393, 6)    ##ver68
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.99))
      
      #LB=       : test_df.shape = (393, 6)    ##ver67
