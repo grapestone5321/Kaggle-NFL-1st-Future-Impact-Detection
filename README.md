@@ -382,9 +382,7 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 ## SET CONSTANTS
 ### both zones 2Class Object Detection strict filter:
 
--------
-
-## (DETECTION_THRESHOLD, DETECTOR_FILTERING_THRESHOLD) = (0.3885, 0.3) : Standard ##ver12
+### (DETECTION_THRESHOLD, DETECTOR_FILTERING_THRESHOLD) = (0.3885, 0.3): Standard ##ver12
 
 ### DETECTION_THRESHOLD: default=0.4
 
