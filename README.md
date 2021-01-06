@@ -306,8 +306,14 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
      
      test_df
 
+-------
 
-## FILTER
+# FILTER
+
+### Private Score:  FILTER-1 < FILTER-2 (0.0515 < 0.1388)
+### LB(Public Score): FILTER-1 > FILTER-2 (0.2689 > 0.2021)
+
+## FILTER-1: both zones 2Class Object Detection strict filter
 
      dropIDX = []
      for keys in test_df.groupby(['gameKey', 'playID']).size().to_dict().keys():
@@ -322,7 +328,7 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
              if bboxCount1 != bboxCount2:
                  dropIDX.append(index)
 
-## FILTER: 2Class Object Detection Inference with filtering
+## FILTER-2: 2Class Object Detection Inference with filtering
 
      dropIDX = []
      for keys in test_df.groupby(['gameKey', 'playID']).size().to_dict().keys():
@@ -338,6 +344,9 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
                  check_df = tmp_df.query('view == "Endzone"')
                  if check_df['frame'].apply(lambda x: np.abs(x - row['frame']) <= 4).sum() == 0:
                      dropIDX.append(index)
+
+
+-------
 
 ## dropIDX
 
@@ -364,7 +373,7 @@ https://www.kaggle.com/artkulak/both-zones-2class-object-detection-strict-filter
 
 ## Progress
 
-### Current Best LB Score: 0.2689
+### Current Best LB Score: 0.2689   ## Private Score: 0.0515
      DETECTION_THRESHOLD = 0.3885: test_df.shape = (396, 6)
      net.class_net = HeadNet(config, num_outputs=config.num_classes, norm_kwargs=dict(eps=.0020, momentum=.01))
 
